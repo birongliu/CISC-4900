@@ -20,13 +20,13 @@ export default function Header() {
         height={96}
       />
       <ul
-        className={`items-center absolute  w-full md:relative md:justify-center md:top-auto top-20 flex-col flex md:w-auto ${
+        className={`items-center absolute gap-2 w-full md:relative md:justify-center md:top-auto top-20 flex-col flex md:w-auto ${
           isOpen ? "block" : "hidden"
         } md:flex md:flex-row `}
       >
         {navigationItems.map((item, index) => (
           <li
-            className="w-full px-10 py-5 hover:bg-slate-300 md:hover:bg-in"
+            className="w-full px-10 py-5 cursor-pointer hover:bg-slate-300 md:hover:bg-in"
             key={index}
           >
             {item}
