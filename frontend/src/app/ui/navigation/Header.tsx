@@ -2,6 +2,8 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
+import CloseIcon from "./icons/Close";
+import MenuIcon from "./icons/Menu";
 
 const navigationItems = ["About", "Feature", "Pricing"];
 
@@ -17,19 +19,19 @@ export default function Header() {
     >
       {resolvedTheme === "light" ? 
       <Image
-        src="/white-logo.svg"
+        src="/black-logo.svg"
         alt="pet selector logo"
-        className={"w-24 h-24"}
-        width={133}
-        height={96}
+        className={"w-24 h-20"}
+        width={50}
+        height={50}
       />
       :
       <Image
         src="/white-logo.svg"
         alt="pet selector logo"
-        className={"w-24 h-24"}
-        width={133}
-        height={96}
+        className={"w-24 h-20"}
+        width={50}
+        height={50}
       />}
       <ul
         className={`items-center absolute gap-2 w-full md:relative md:justify-center md:top-auto top-20 flex-col flex md:w-auto ${
@@ -51,7 +53,7 @@ export default function Header() {
           WaitList
         </button>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <Image alt="menu" src={"/icons/close.svg"} height={43} width={50} /> : <Image alt="menu" src={"/icons/Menu.svg"} height={43} width={51} />}
+          {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
     </div>
