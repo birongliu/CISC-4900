@@ -4,9 +4,7 @@ import { useTheme } from "next-themes";
 export default function ThemeSwitcher() {
 const { resolvedTheme, setTheme } = useTheme();
   return (
-    <div className="fixed z-20 flex flex-col space-y-2 rounded-3xl p-2 h-32 justify-between right-7" style={{
-        background: 'linear-gradient(180deg, #F5F5F5 38.97%, #BFB6B6 50.75%, #121212 67.87%)'
-      }}>
+    <div className="fixed z-20 flex flex-col space-y-2 rounded-3xl p-2 h-32 justify-between right-7">
         <button
           aria-label="Toggle Light Mode"
           type="button"
