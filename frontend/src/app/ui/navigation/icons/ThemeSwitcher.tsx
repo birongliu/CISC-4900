@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from "next-themes";
 
 export default function ThemeSwitcher() {
-const { resolvedTheme, setTheme } = useTheme();
+const { setTheme } = useTheme();
   return (
     <div className="fixed z-20 flex flex-col space-y-2 rounded-3xl p-2 h-32 justify-between right-7">
         <button
@@ -11,7 +11,7 @@ const { resolvedTheme, setTheme } = useTheme();
           className={`w-8 h-8 p-1 rounded-full transition-colors duration-200`}
           onClick={() => setTheme("light")}
         >
-          {/* <Image src={LightModeIcon} alt="Light Mode" width={32} height={32} /> */}
+          ok
         </button>
   
         <button
@@ -20,7 +20,7 @@ const { resolvedTheme, setTheme } = useTheme();
           className={`w-8 h-8 p-1 rounded-full transition-colors duration-200`}
           onClick={() => setTheme("dark")}
         >
-          {/* <Image src={DarkModeIcon} alt="Dark Mode" width={32} height={32} /> */}
+          lol
         </button>
   
       </div>
