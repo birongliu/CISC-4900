@@ -10,10 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-
+        "light-primary": "rgba(153, 162, 165, 1)"
       },
       backgroundColor: {
         "light-primary": "rgba(243, 225, 200, 1)",
+        "light-secondary": "rgba(227, 205, 173, 1)",
+        "dark-primary": "rgba(227, 205, 173, 1)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
