@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <ThemeSwitcher/>
-      <div className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="flex flex-col items-center h-screen justify-between p-24">
       Under Construction
       </div>
     </main>
