@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const navigationItems = ["About", "Feature", "Pricing"];
 
@@ -51,7 +52,13 @@ export default function Header() {
         <button className="mr-5 bg-light-secondary p-3 lg:block rounded">
           WaitList
         </button>
-        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+         <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+          </SignedIn>
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
