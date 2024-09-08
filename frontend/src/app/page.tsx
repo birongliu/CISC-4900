@@ -1,13 +1,12 @@
-"use client"
-import Image from "next/image";
+"use client";
 import ThemeSwitcher from "./ui/navigation/ThemeSwitcher";
 
 export default function Home() {
   return (
     <main>
-      <ThemeSwitcher/>
+      <ThemeSwitcher />
       <div className="flex flex-col items-center h-screen justify-between p-24">
-      Under Construction
+        Under Construction ??/
       </div>
     </main>
   );
