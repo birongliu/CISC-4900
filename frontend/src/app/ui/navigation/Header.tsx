@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { Searchbar } from "./search/search";
 
 const navigationItems = ["About", "Feature", "Pricing"];
 
@@ -13,7 +13,7 @@ export default function Header() {
   const { resolvedTheme } = useTheme();
   return (
     <div
-      className={`flex justify-between lg:justify-evenly items-center lg:mb-auto pt-2 ${
+      className={`flex justify-between lg:justify-evenly items-center lg:mb-auto pt-2  ${
         isOpen ? "mb-32" : ""
       }`}
     >
@@ -49,15 +49,7 @@ export default function Header() {
         ))}
       </ul>
       <div className="flex gap-1 px-5 lg:px-0">
-        <button className="mr-5 bg-light-secondary p-3 lg:block rounded">
-          WaitList
-        </button>
-         <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-          </SignedIn>
+        <Searchbar />
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>

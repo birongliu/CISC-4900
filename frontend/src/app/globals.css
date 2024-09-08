@@ -8,3 +8,8 @@
         @apply bg-light-primary dark:bg-slate-600;
     }
 }
+
+body:has([role="dialog"]) {
+    @apply overflow-y-hidden;
+}
+ 

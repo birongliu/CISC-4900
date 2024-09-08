@@ -9,6 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        fade: 'fadeOut 1s'
+      },
+      keyframes: {
+        fadeOut: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        }
+      },
       colors: {
         "light-primary": "rgba(153, 162, 165, 1)"
       },
