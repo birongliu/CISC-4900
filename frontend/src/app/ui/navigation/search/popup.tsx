@@ -49,7 +49,7 @@ export default function PopOut({
           ))
         ) : (
           <div className={`flex items-center font-semibold mt-1 h-40 justify-center`}>
-          {filteredItems.length > 0 ? "No suggestions" : "No results found"}
+          {filteredItems.length > 0 ? "No suggestions" : "No suggestions found"}
           </div>
         )}
       </ul>
