@@ -29,7 +29,7 @@ export const Searchbar = () => {
     <Fragment>
       <button
         onClick={handleOpen}
-        className="p-5 overflow-hidden  h-16 bg-light-secondary shadow-sm flex group items-center"
+        className="p-5 overflow-hidden h-16 bg-light-secondary shadow-sm flex group items-center"
       >
         <div className="flex items-center justify-center dark:fill-white fill-dark">
           <svg
