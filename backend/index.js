@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: process.env.FRONTEND_URL
 }));
 
 app.get("/api/pet", async (req, res) => {
