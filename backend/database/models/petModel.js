@@ -21,7 +21,7 @@ export async function findAll() {
 
 export async function get(name) {
     const data = await pets.findOne({
-        name,
+        name: { $eq: name }
     })
     if (!data) return null
     return data;
@@ -30,5 +30,5 @@ export async function get(name) {
 export async function update(name, data) {
     const pet = await get(name);
     if(!pet) return null;
-    return await pets.updateOne({ name }, data);
+    return await pets.updateOne({ name: { $eq: name } }, data);
 }
