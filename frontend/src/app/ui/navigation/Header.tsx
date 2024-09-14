@@ -52,7 +52,7 @@ export default function Header() {
       <Button className=" bg-black  text-white rounded-xl py-2 px-5">
           Login
         </Button>
-        <button className="md:hidden block" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
   
