@@ -22,7 +22,7 @@ const images = [
 
 export default function PetMatcher() {
   return (
-    <div className="my-20 flex items-center px-12 justify-center">
+    <section className="my-20 flex items-center px-12 justify-center">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold font-poppins text-primary leading-tight">
@@ -55,6 +55,6 @@ export default function PetMatcher() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

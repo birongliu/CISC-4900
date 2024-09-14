@@ -2,11 +2,11 @@ import React from "react";
 import Shape from "./components/Shape";
 import Vector from "./components/Vector";
 import Image from "next/image";
-import Button from "./components/Button";
+import Button from "../shared/Button";
 
 export default function Hero() {
   return (
-    <div className="h-full my-16 relative grid lg:px-20 px-10 lg:grid-cols-2">
+    <section className="h-full my-16 relative grid lg:px-20 px-10 lg:grid-cols-2">
       <div className=" w-full py-32 relative">
         <Vector className="z-10 top-2" />
         <Shape className="top-10 right-32" />
@@ -34,9 +34,9 @@ export default function Hero() {
           alt="hero"
           width={937}
           height={699}
-          className="w-full h-full"
+          className="object-contain w-full h-full"
         />
       </div>
-    </div>
+    </section>
   );
 }
