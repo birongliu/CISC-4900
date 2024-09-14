@@ -6,14 +6,14 @@ import Button from "./components/button";
 
 export default function Hero() {
   return (
-    <div className="h-full py-16 relative grid lg:grid-cols-2">
+    <div className="h-full py-5 relative grid lg:px-16 lg:grid-cols-2">
       <section className=" w-full py-32 relative">
         <Vector className="z-10 top-2" />
         <Shape className="top-10 right-32" />
         <span className="font-bold font-poppins text-text-secondary">
           Pet Adoption
         </span>
-        <h1 className="text-black-100 font-bold text-4xl leading-snug">
+        <h1 className="text-black-100 font-bold text-3xl  leading-snug">
           Adopt, Grow, and Build a Community—One Paw at a Time
         </h1>
         <p className="pt-3">
@@ -27,7 +27,7 @@ export default function Hero() {
           Get Started
         </Button>
       </section>
-      <section className="md:block hidden mt-10">
+      <section className="lg:block hidden">
         <Image
           src="/hero-picture.svg"
           alt="hero"
