@@ -6,7 +6,7 @@ import Button from "./components/button";
 
 export default function Hero() {
   return (
-    <div className="h-full py-16 md:px-20 relative grid lg:grid-cols-2">
+    <div className="h-full py-16 relative grid lg:grid-cols-2">
       <section className=" w-full py-32 relative">
         <Vector className="z-10 top-2" />
         <Shape className="top-10 right-32" />
