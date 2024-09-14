@@ -43,12 +43,12 @@ export default function PopOut({
           autoFocus={true}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="relative h-12 rounded-md px-3 w-full bg-white text-black "
+          className="relative h-12 rounded-md px-3 w-full outline-none bg-white text-black "
           placeholder="Search for pets or inquries"
         />
       </form>
       <ul
-        className={`w-96 md:w-6/12 mt-2 overflow-auto px-2 rounded-md scroll-my-40 scroll-ml-6 h-52 dark:text-black bg-white`}
+        className={`w-96 md:w-6/12 mt-1  overflow-auto px-2 rounded-md scroll-my-40  h-52 dark:text-black bg-white`}
       >
         <div
           className={`px-2 py-2 text-sm font-bold border-b-2 ${

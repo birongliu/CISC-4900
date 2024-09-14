@@ -1,13 +1,11 @@
-"use client";
-import ThemeSwitcher from "./ui/navigation/ThemeSwitcher";
+import Hero from "./ui/landing/Hero";
+import About from "./ui/landing/About";
 
 export default function Home() {
   return (
-    <main>
-      <ThemeSwitcher />
-      <div className="flex flex-col items-center h-screen justify-between p-24">
-        Under Construction ??/
-      </div>
+    <main className="relative flex justify-center items-center flex-col overflow-hidden sm:px-10 px-5">
+      <Hero />
+      <About />
     </main>
   );
 }
