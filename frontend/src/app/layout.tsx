@@ -9,9 +9,8 @@ import Footer from "./ui/navigation/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cat Finder Assister",
-  description:
-    "Assisting new cat users on adopting/purchase cats and their accessories by providing them with necessary information/fun facts",
+  title: "PetPals",
+  description: ""
 };
 
 export default function RootLayout({
