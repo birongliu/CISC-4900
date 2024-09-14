@@ -31,7 +31,7 @@ export default function About() {
       <h1 className="font-bold font-poppins text-3xl text-primary">
         What is Petpals?
       </h1>
-      <p className="pt-5 font-poppins px-12 md:px-24 text-base text-primary">
+      <p className="pt-5 font-poppins px-12 md:px-32 text-pretty text-primary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
         velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit
         amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu
@@ -40,7 +40,7 @@ export default function About() {
         elit. Nam quis felis convallis, rhoncus leo id, scelerisque purus. Ut
         auctor gravida nulla.
       </p>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 p-10 pt-10 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 p-10 pt-10 gap-10 md:gap-16 place-items-center">
         {cards.map((card, index) => (
           <div
             key={index}
