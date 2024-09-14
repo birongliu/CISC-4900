@@ -29,12 +29,14 @@ const config: Config = {
       },
       colors: {
         "light-primary": "rgba(153, 162, 165, 1)",
+        "purple-1000": "rgba(47, 0, 22, 1)",
         "button-primary": "rgba(241, 239, 228, 1)",
         "black-100": "rgba(47, 0, 22, 1)",
-        "text-secondary": "rgba(227, 205, 173, 1)",
+        "secondary": "rgba(227, 205, 173, 1)",
       },
       backgroundColor: {
         "light-primary": "rgba(241, 239, 228, 1)",
+        "light-overlay": "#F3E1C8",
         "dark-primary": "rgba(227, 205, 173, 1)",
       },
     },
