@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
-import Button from "../landing/components/Button";
+import Button from "../shared/Button";
 const navigationItems = ["About", "Feature", "Contact"];
 
 export default function Header() {

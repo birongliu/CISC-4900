@@ -2,7 +2,7 @@ import React from "react";
 import Shape from "./components/Shape";
 import Vector from "./components/Vector";
 import Image from "next/image";
-import Button from "./components/Button";
+import Button from "../shared/Button";
 
 export default function Hero() {
   return (
