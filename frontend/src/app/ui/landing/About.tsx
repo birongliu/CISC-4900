@@ -24,14 +24,14 @@ const cards = [
 
 export default function About() {
   return (
-    <div
+    <section
       id="about"
-      className="flex-col py-28 rounded my-20 w-full justify-center z-10 bg-light-overlay flex items-center"
+      className="flex-col py-24 my-28 md:pb-48 rounded justify-center z-10 bg-light-overlay flex items-center"
     >
       <h1 className="font-bold font-poppins text-3xl text-primary">
         What is Petpals?
       </h1>
-      <p className="pt-5 font-poppins px-12 md:px-32 text-pretty text-primary">
+      <p className="pt-5 font-poppins lg:px-32 px-16 text-pretty text-primary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
         velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit
         amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu
@@ -40,7 +40,7 @@ export default function About() {
         elit. Nam quis felis convallis, rhoncus leo id, scelerisque purus. Ut
         auctor gravida nulla.
       </p>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 p-10 pt-10 gap-10 md:gap-16 place-items-center">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3  pt-10 gap-10 md:gap-16 place-items-center">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -60,6 +60,6 @@ export default function About() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

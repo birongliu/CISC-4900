@@ -14,6 +14,7 @@ const app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(bodyParser.json());
 
 const user = {
@@ -36,8 +37,22 @@ app.post('/api/login', async(req, res) => {
             });
         } else {
             console.log('ERROR: Could not log in');
+            res.send('Username or password incorrect');
         }
 })
+
+function authMiddleware(req, res, next) {
+    if(!req.headers.authorization) return res.status(403).json({ message: "Unauthorized" })
+    const [type, token] = req.headers.authorization?.split(" ");
+    if(type !== process.env.AUTH_TYPE || !token) return res.status(403).json({ message: "Unauthorized" })
+    jwt.verify(token, process.env.JWT_KEY, (err, data) => {
+        if(err) return res.status(403).json({ message: "Unauthorized" })
+            console.log(data)
+        req.user = data.user
+        next()
+    })
+}
+
 
 app.get('/user/data', (req, res) => {
         //verify the JWT token generated for the user
@@ -57,19 +72,20 @@ app.get('/user/data', (req, res) => {
         })
     });
 
-app.get("/api/pet", async (req, res) => {
+
+app.get("/api/pet", authMiddleware, async (req, res) => {
     const id = req.body.id
     if(!id) return res.json({ data: "invalid id provided", status: 404 })
     const pet = await get(id)
     res.json({ data: pet ? pet : null, status: pet ? 200 : 404 })
 })
 
-app.get("/api/pets", async (req, res) => {
+app.get("/api/pets", authMiddleware, async (req, res) => {
     const pet = await findAll()
     res.json({ data: pet, status: 200 })
 })
 
-app.post("/api/pets", async (req, res) => {
+app.post("/api/pets", authMiddleware, async (req, res) => {
     const validate = z.object({
         breed: z.string(),
         name: z.string(),
