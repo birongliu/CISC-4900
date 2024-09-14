@@ -28,11 +28,10 @@ const config: Config = {
         }
       },
       colors: {
-        "light-primary": "rgba(153, 162, 165, 1)",
-        "purple-1000": "rgba(47, 0, 22, 1)",
-        "button-primary": "rgba(241, 239, 228, 1)",
-        "black-100": "rgba(47, 0, 22, 1)",
-        "secondary": "rgba(227, 205, 173, 1)",
+        "primary": "rgba(47, 0, 22, 1)",
+        "white": "rgba(241, 239, 228, 1)",
+        "lightBeige": "#E3CDAD",
+        "softCream": "#F1EFE4",  
       },
       backgroundColor: {
         "light-primary": "rgba(241, 239, 228, 1)",
