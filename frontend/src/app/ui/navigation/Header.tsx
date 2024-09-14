@@ -4,8 +4,7 @@ import Image from "next/image";
 import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
-import Button from "../landing/components/button";
-
+import Button from "../landing/components/Button";
 const navigationItems = ["About", "Feature", "Contact"];
 
 export default function Header() {
@@ -49,13 +48,12 @@ export default function Header() {
         ))}
       </ul>
       <div className="flex justify-center items-center gap-1 px-5 lg:px-0">
-      <Button className=" bg-black  text-white rounded-xl py-2 px-5">
+        <Button className=" bg-black  text-white rounded-xl py-2 px-5">
           Login
         </Button>
         <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
-  
       </div>
     </div>
   );
