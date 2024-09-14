@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins'],
+     },
       animation: {
         fadeIn: 'fadeIn 1s',
         fadeOut: 'fadeOut 1s'
@@ -24,17 +28,14 @@ const config: Config = {
         }
       },
       colors: {
-        "light-primary": "rgba(153, 162, 165, 1)"
+        "light-primary": "rgba(153, 162, 165, 1)",
+        "button-primary": "rgba(241, 239, 228, 1)",
+        "black-100": "rgba(47, 0, 22, 1)",
+        "text-secondary": "rgba(227, 205, 173, 1)",
       },
       backgroundColor: {
-        "light-primary": "rgba(243, 225, 200, 1)",
-        "light-secondary": "rgba(227, 205, 173, 1)",
+        "light-primary": "rgba(241, 239, 228, 1)",
         "dark-primary": "rgba(227, 205, 173, 1)",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

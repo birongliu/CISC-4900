@@ -10,20 +10,27 @@ export const Searchbar = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/pets`);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/pets`
+      );
       const ctx = await response.json();
       return ctx.data;
     } catch (error) {
-      return []
+      return [];
     }
-  }
-  
+  };
+
   const handleOpen = () => {
-    fetchData().then(data => {
-      setItems(data);
+    if (items.length === 0) {
+      fetchData().then((data) => {
+        setItems(data);
+        setOpenMenu((prev) => !prev);
+      });
+    } else {
       setOpenMenu((prev) => !prev);
-    });
-  }
+    }
+  
+  };
 
   return (
     <Fragment>
