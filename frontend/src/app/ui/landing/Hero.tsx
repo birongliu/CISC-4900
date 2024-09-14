@@ -6,8 +6,8 @@ import Button from "./components/button";
 
 export default function Hero() {
   return (
-    <div className="h-full py-5 relative grid lg:px-16 lg:grid-cols-2">
-      <section className=" w-full py-32 relative">
+    <div className="h-full my-16 relative grid lg:px-20 px-10 lg:grid-cols-2">
+      <div className=" w-full py-32 relative">
         <Vector className="z-10 top-2" />
         <Shape className="top-10 right-32" />
         <span className="font-bold font-poppins text-text-secondary">
@@ -26,8 +26,9 @@ export default function Hero() {
         <Button className="mt-5 bg-black  text-white rounded-xl py-2 px-5">
           Get Started
         </Button>
-      </section>
-      <section className="lg:block hidden">
+        <Shape className="-bottom-10 right-36" />
+      </div>
+      <div className="lg:block hidden">
         <Image
           src="/hero-picture.svg"
           alt="hero"
@@ -35,7 +36,7 @@ export default function Hero() {
           height={699}
           className="w-full h-full"
         />
-      </section>
+      </div>
     </div>
   );
 }
