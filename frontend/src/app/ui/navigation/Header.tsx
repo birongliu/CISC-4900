@@ -4,17 +4,17 @@ import Image from "next/image";
 import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import Button from "../landing/components/button";
 
-const navigationItems = ["About", "Feature", "Pricing"];
+const navigationItems = ["About", "Feature", "Contact"];
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
   const { resolvedTheme } = useTheme();
   return (
     <div
-      className={`flex justify-between lg:justify-evenly items-center lg:mb-auto pt-2 ${
-        isOpen ? "mb-32" : ""
+      className={`flex justify-between lg:justify-evenly items-center lg:mb-auto pt-2  ${
+        isOpen ? "mb-48" : ""
       }`}
     >
       {resolvedTheme === "dark" ? (
@@ -41,26 +41,21 @@ export default function Header() {
       >
         {navigationItems.map((item, index) => (
           <li
-            className="w-full px-10 py-5 cursor-pointer hover:bg-light-secondary lg:hover:bg-in"
+            className="w-full px-10 py-5 inset-0 z-10 cursor-pointer hover:bg-text-secondary lg:hover:bg-in"
             key={index}
           >
             {item}
           </li>
         ))}
       </ul>
-      <div className="flex gap-1 px-5 lg:px-0">
-        <button className="mr-5 bg-light-secondary p-3 lg:block rounded">
-          WaitList
-        </button>
-         <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-          </SignedIn>
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      <div className="flex justify-center items-center gap-1 px-5 lg:px-0">
+      <Button className=" bg-black  text-white rounded-xl py-2 px-5">
+          Login
+        </Button>
+        <button className="md:hidden block" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
+  
       </div>
     </div>
   );
