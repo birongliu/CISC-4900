@@ -7,7 +7,7 @@ import Button from "../shared/Button";
 
 export default function Hero() {
   return (
-    <section className="my-28 lg:mt-20 lg:mb-40 flex items-center px-24 justify-center">
+    <section className="my-28 lg:mt-20 lg:mb-40 flex items-center px-16 justify-center">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-20 items-center">
         <div className="space-y-6 relative">
         <Vector className="z-10" />

@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <div
-      className={`flex lg:justify-evenly items-center lg:mb-auto pt-2  ${
+      className={`flex lg:justify-evenly justify-between items-center lg:mb-auto pt-2  ${
         isOpen ? "mb-48" : ""
       }`}
     >
