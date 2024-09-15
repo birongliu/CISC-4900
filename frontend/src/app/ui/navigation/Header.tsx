@@ -11,7 +11,8 @@ import {
   SignInButton,
   SignedIn,
 } from "@clerk/nextjs";
-const navigationItems = ["About", "Feature", "Contact"];
+import Link from "next/link";
+const navigationItems = ["About", "Explore"];
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -50,7 +51,7 @@ export default function Header() {
             className="w-full px-10 py-5 inset-0 z-10 cursor-pointer hover:bg-text-secondary lg:hover:bg-in"
             key={index}
           >
-            {item}
+            <Link href={`#${item}`}>{item}</Link>
           </li>
         ))}
       </ul>

@@ -25,7 +25,7 @@ const cards = [
 export default function About() {
   return (
     <section
-      id="about"
+      id="About"
       className="flex-col py-28 my-28 rounded justify-center z-10 bg-light-overlay flex items-center"
     >
       <div className="max-w-7xl w-full flex flex-col items-center">

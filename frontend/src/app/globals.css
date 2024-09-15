@@ -10,6 +10,12 @@
     }
 }
 
+@layer base {
+    html {
+      @apply scroll-smooth;
+    }
+  }
+
 
 body:has([role="dialog"]) {
     @apply overflow-y-hidden;
