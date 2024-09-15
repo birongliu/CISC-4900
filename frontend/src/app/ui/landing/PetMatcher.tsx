@@ -20,9 +20,9 @@ const images = [
   },
 ];
 
-export default function PetMatcher() {
+export default function Explore() {
   return (
-    <section className="mb-28 flex items-center px-12 md:px-24 justify-center">
+    <section id="Explore" className="mb-28 flex items-center px-12 md:px-24 justify-center">
       <div className="max-w-7xl w-full grid gap-8 items-center lg:grid-cols-2 grid-cols-1">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold font-poppins text-primary leading-tight">
