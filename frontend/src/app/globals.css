@@ -10,7 +10,12 @@
     }
 }
 
+
 body:has([role="dialog"]) {
     @apply overflow-y-hidden;
 }
  
+
+body:has([role="user-button"]) {
+    @apply overflow-auto;
+}

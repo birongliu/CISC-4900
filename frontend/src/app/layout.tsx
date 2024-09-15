@@ -3,8 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./ui/navigation/Header";
 import { ThemeContext } from "./ui/navigation/ThemeProvider";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkLoaded, ClerkProvider } from "@clerk/nextjs";
 import Footer from "./ui/navigation/Footer";
+import { cn } from "./utils/functions";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +24,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeContext>
+          <ClerkLoaded> 
           <Header />
           {children}
           <Footer />
+          </ClerkLoaded>
         </ThemeContext>
       </body>
       </html>
