@@ -5,14 +5,21 @@ import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
 import Button from "../shared/Button";
+import {
+  SignedOut,
+  UserButton,
+  SignInButton,
+  SignedIn,
+} from "@clerk/nextjs";
 const navigationItems = ["About", "Feature", "Contact"];
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
   const { resolvedTheme } = useTheme();
+
   return (
     <div
-      className={`flex justify-between lg:justify-evenly items-center lg:mb-auto pt-2  ${
+      className={`flex lg:justify-evenly items-center lg:mb-auto pt-2  ${
         isOpen ? "mb-48" : ""
       }`}
     >
@@ -48,9 +55,16 @@ export default function Header() {
         ))}
       </ul>
       <div className="flex justify-center items-center gap-1 px-5 lg:px-0">
-        <Button className=" bg-black  text-white rounded-xl py-2 px-5">
-          Login
-        </Button>
+        <SignedOut>
+          <Button className="bg-black text-white rounded-xl py-2 px-5">
+            <SignInButton />
+          </Button>
+        </SignedOut>
+        <SignedIn>
+          <div role="user-button" className="flex items-center overflow">
+            <UserButton />
+          </div>
+        </SignedIn>
         <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
