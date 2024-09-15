@@ -8,9 +8,9 @@ import Button from "../shared/Button";
 export default function Hero() {
   return (
     <section className="my-28 lg:mt-20 lg:mb-40 flex items-center px-24 justify-center">
-      <div className="w-full grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-20 items-center">
         <div className="space-y-6 relative">
-        <Vector className="z-10  " />
+        <Vector className="z-10" />
         <Shape className="-top-10 right-32 " />
           <span className="font-bold font-poppins text-lightBeige">
             Pet Adoption
