@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section
       id="About"
-      className="flex-col py-28 my-28 rounded justify-center z-10 bg-light-overlay flex items-center"
+      className="flex-col py-28 my-28 rounded justify-center z-10 w-full bg-light-overlay flex items-center"
     >
       <div className="max-w-7xl w-full flex flex-col items-center">
       <h1 className="font-bold font-poppins text-3xl text-primary">
@@ -41,7 +41,7 @@ export default function About() {
         elit. Nam quis felis convallis, rhoncus leo id, scelerisque purus. Ut
         auctor gravida nulla.
       </p>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3  pt-10 gap-10 md:gap-16 place-items-center">
+      <div className="pt-16 grid items-center lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20">
         {cards.map((card, index) => (
           <div
             key={index}
