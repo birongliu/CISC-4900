@@ -26,14 +26,13 @@ export default function About() {
   return (
     <section
       id="About"
-      className="flex-col py-28 my-28 rounded justify-center z-10 w-full bg-light-overlay flex items-center"
-    >
+     className="flex items-center px-12 md:px-24 py-28 justify-center">
       <div className="max-w-7xl w-full flex flex-col items-center">
-      <h1 className="font-bold font-poppins text-3xl text-primary">
-        What is Petpals?
+      <h1 className="text-4xl md:text-5xl font-bold font-poppins text-primary leading-tight">
+      What is Petpals?
       </h1>
-      <p className="pt-5 font-poppins text-center lg:px-32 px-16 text-pretty text-primary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
+      <p className="text-primary text-lg font-poppins pt-10">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
         velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit
         amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu
         pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit
