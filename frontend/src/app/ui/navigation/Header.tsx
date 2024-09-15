@@ -12,7 +12,7 @@ import {
   SignedIn,
 } from "@clerk/nextjs";
 import Link from "next/link";
-const navigationItems = ["About", "Explore"];
+const navigationItems = ["About", "Explore", "Team"];
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
