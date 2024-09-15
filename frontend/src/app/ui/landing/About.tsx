@@ -32,7 +32,7 @@ export default function About() {
       <h1 className="font-bold font-poppins text-3xl text-primary">
         What is Petpals?
       </h1>
-      <p className="pt-5 font-poppins lg:px-32 px-16 text-pretty text-primary">
+      <p className="pt-5 font-poppins text-center lg:px-32 px-16 text-pretty text-primary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
         velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit
         amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import Github from "./components/Github";
+import Linkedin from "./components/Linkedin";
 
 interface Member {
   name: string;
   role: string;
   photo: string;
-  linkedinUrl?: string;
+  linkedinUrl: string;
   githubUrl?: string;
-  personalWebsiteUrl?: string;
-  instagramUrl?: string;
 }
 
 const members: Member[] = [
@@ -16,25 +16,26 @@ const members: Member[] = [
     name: "Bradley Hung",
     role: "Project Manager",
     photo: "/bradley.jpeg",
-    linkedinUrl: "https://www.linkedin.com/in/bradley-lee-7b6a1b1b4/",
+    linkedinUrl: "https://www.linkedin.com/in/bradley-hung/",
   },
   {
     name: "Bi Rong Liu",
     role: "Frontend Developer",
     photo: "/chat.svg",
-    linkedinUrl: "https://www.linkedin.com/in/bradley-lee-7b6a1b1b4/",
+    githubUrl: "https://www.github.com/birongliu",
+    linkedinUrl: "https://www.linkedin.com/in/birongliu/",
   },
   {
     name: "Shuyi Zhou",
     role: "Backend Developer",
     photo: "/chat.svg",
-    linkedinUrl: "https://www.linkedin.com/in/bradley-lee-7b6a1b1b4/",
+    linkedinUrl: "https://www.linkedin.com/in/shuyi-zhou-296ab6246/",
   },
   {
     name: "Jessica Jiang",
     role: "UI/UX Designer",
     photo: "/chat.svg",
-    linkedinUrl: "https://www.linkedin.com/in/bradley-lee-7b6a1b1b4/",
+    linkedinUrl: "https://www.linkedin.com/in/jjessica415/",
   },
 ];
 
@@ -55,13 +56,36 @@ export default function Team() {
       </div>
       <ul className="pt-16 grid lg:grid-cols-2 xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-20 ">
         {members.map((member, index) => {
-          return <div className="flex text-center flex-col gap-4 w-full " key={index}>
-            <Image src={member.photo} alt={member.name} width={200} height={200} className="w-52 h-52 rounded-full" />
-            <div className="flex gap-1 flex-col">
-                <span className="font-poppins text-xl font-semibold text-primary">{member.name}</span>
-                <span className="font-poppins text-base text-gray-500">{member.role}</span>
+          return (
+            <div
+              className="flex text-center flex-col gap-4 w-full "
+              key={index}
+            >
+              <Image
+                src={member.photo}
+                alt={member.name}
+                width={200}
+                height={200}
+                className="w-52 h-52 rounded-full"
+              />
+              <div className="flex gap-1 flex-col">
+                <span className="font-poppins text-xl font-semibold text-primary">
+                  {member.name}
+                </span>
+                <span className="font-poppins text-base text-gray-500">
+                  {member.role}
+                </span>
+                <ul className="flex justify-center gap-2 pt-1">
+                  <li>
+                    {member.githubUrl && <Github link={member.githubUrl} />}
+                  </li>
+                  <li>
+                    {member.linkedinUrl && <Linkedin link={member.linkedinUrl} />}
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>;
+          );
         })}
       </ul>
     </section>
