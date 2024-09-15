@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PetPals",
-  description: ""
+  description: "Discover the joy of pet adoption alongside a supportive community of animal lovers. PetPals is a space where you can not only find your perfect pet match but also share experiences, advice, and love with other pet owners. Let's make adoption the start of a new journey together."
 };
 
 export default function RootLayout({
