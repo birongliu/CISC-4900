@@ -16,6 +16,7 @@ const members: Member[] = [
     name: "Bradley Hung",
     role: "Project Manager",
     photo: "/bradley.jpeg",
+    githubUrl: "https://www.github.com/bradleyhung",
     linkedinUrl: "https://www.linkedin.com/in/bradley-hung/",
   },
   {
