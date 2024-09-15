@@ -26,8 +26,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex-col py-24 my-28 md:pb-48 rounded justify-center z-10 bg-light-overlay flex items-center"
+      className="flex-col py-28 my-28 rounded justify-center z-10 bg-light-overlay flex items-center"
     >
+      <div className="max-w-7xl w-full flex flex-col items-center">
       <h1 className="font-bold font-poppins text-3xl text-primary">
         What is Petpals?
       </h1>
@@ -59,6 +60,7 @@ export default function About() {
             </a>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );
