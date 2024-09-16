@@ -3,19 +3,19 @@ import Arrow from "./components/Arrow";
 
 const images = [
   {
-    src: "/dog.png",
+    src: "/explore/dog.png",
     alt: "Happy dog",
   },
   {
-    src: "/rabbit.png",
+    src: "/explore/rabbit.png",
     alt: "Cute rabbit",
   },
   {
-    src: "/rat.png",
+    src: "/explore/rat.png",
     alt: "Curious hamster",
   },
   {
-    src: "/cat.png",
+    src: "/explore/cat.png",
     alt: "Fluffy cat",
   },
 ];

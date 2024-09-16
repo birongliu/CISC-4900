@@ -1,8 +1,13 @@
 import { cn } from '@/app/utils/functions'
-import React, { ReactNode } from 'react'
+import React, { ButtonHTMLAttributes, ReactNode } from 'react'
 
-export default function Button({ children, className }: { children: ReactNode, className?: string }) {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  className?: string;
+}
+
+export default function Button({ children, className, ...rest }: ButtonProps) {
   return (
-    <button className={cn('bg-darkMaroon rounded-xl p-3 text-button-primary', className)}>{children}</button>
+    <button {...rest} className={cn('bg-darkMaroon rounded-xl p-3 text-button-primary', className)}>{children}</button>
   )
 }
