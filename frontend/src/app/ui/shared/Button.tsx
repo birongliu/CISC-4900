@@ -6,8 +6,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export default function Button({ children, className, ...args }: ButtonProps) {
+export default function Button({ children, className, ...rest }: ButtonProps) {
   return (
-    <button {...args} className={cn('bg-darkMaroon rounded-xl p-3 text-button-primary', className)}>{children}</button>
+    <button {...rest} className={cn('bg-darkMaroon rounded-xl p-3 text-button-primary', className)}>{children}</button>
   )
 }
