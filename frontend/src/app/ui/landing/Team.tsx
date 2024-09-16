@@ -40,12 +40,6 @@ const members: Member[] = [
   },
 ];
 
-type SocialKey = "linkedinUrl" | "githubUrl";
-
-type ISocial = {
-  [key in SocialKey]: (...args: any[]) => React.JSX.Element;
-};
-
 export default function Team() {
   return (
     <section
