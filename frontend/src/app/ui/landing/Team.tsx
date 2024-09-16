@@ -22,7 +22,7 @@ const members: Member[] = [
   {
     name: "Bi Rong Liu",
     role: "Frontend Developer",
-    photo: "/chat.svg",
+    photo: "/birong.jpeg",
     githubUrl: "https://www.github.com/birongliu",
     linkedinUrl: "https://www.linkedin.com/in/birongliu/",
   },
