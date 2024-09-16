@@ -35,7 +35,7 @@ const members: Member[] = [
   {
     name: "Jessica Jiang",
     role: "UI/UX Designer",
-    photo: "/chat.svg",
+    photo: "/jessica.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/jjessica415/",
   },
 ];
