@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="lg:block hidden">
           <Image
             key="pet"
-            src="/hero-picture.svg"
+            src="/hero/hero-picture.svg"
             alt="hero"
             width={300}
             height={300}

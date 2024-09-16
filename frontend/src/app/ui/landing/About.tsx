@@ -6,19 +6,19 @@ const cards = [
     title: "Adopt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem enim leo.",
-    image: "/chat.svg",
+    image: "/about/chat.svg",
   },
   {
     title: "Community",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem enim leo.",
-    image: "/chat.svg",
+    image: "/about/chat.svg",
   },
   {
     title: "AI",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem enim leo.",
-    image: "/chat.svg",
+    image: "/about/chat.svg",
   },
 ];
 
