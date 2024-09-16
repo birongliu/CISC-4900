@@ -33,6 +33,7 @@ const config: Config = {
         "white": "rgba(241, 239, 228, 1)",
         "lightBeige": "#E3CDAD",
         "softCream": "#F1EFE4",  
+        "darkMaroon": "#2f0016"
       },
       backgroundColor: {
         "light-primary": "rgba(241, 239, 228, 1)",
