@@ -63,7 +63,7 @@ export default function Header() {
         </SignedOut>
         <SignedIn>
           <div role="user-button" className="flex items-center overflow">
-            <UserButton />
+            <UserButton  />
           </div>
         </SignedIn>
         <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>

@@ -22,7 +22,7 @@ const members: Member[] = [
   {
     name: "Bi Rong Liu",
     role: "Frontend Developer",
-    photo: "/chat.svg",
+    photo: "/birong.jpeg",
     githubUrl: "https://www.github.com/birongliu",
     linkedinUrl: "https://www.linkedin.com/in/birongliu/",
   },
@@ -35,7 +35,7 @@ const members: Member[] = [
   {
     name: "Jessica Jiang",
     role: "UI/UX Designer",
-    photo: "/chat.svg",
+    photo: "/jessica.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/jjessica415/",
   },
 ];
