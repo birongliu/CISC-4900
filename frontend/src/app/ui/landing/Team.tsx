@@ -29,7 +29,7 @@ const members: Member[] = [
   {
     name: "Shuyi Zhou",
     role: "Backend Developer",
-    photo: "/chat.svg",
+    photo: "/shuyi.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/shuyi-zhou-296ab6246/",
   },
   {
