@@ -6,6 +6,7 @@ import { ThemeContext } from "./ui/navigation/ThemeProvider";
 import { ClerkLoaded, ClerkProvider } from "@clerk/nextjs";
 import Footer from "./ui/navigation/Footer";
 import { cn } from "./utils/functions";
+import AnnouncementBanner from "./ui/shared/AnnouncementBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 

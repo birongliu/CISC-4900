@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <div
-      className={`flex lg:justify-evenly justify-between items-center lg:mb-auto pt-2  ${
+      className={`flex lg:justify-evenly relative justify-between items-center lg:mb-auto pt-2  ${
         isOpen ? "mb-48" : ""
       }`}
     >
@@ -42,13 +42,13 @@ export default function Header() {
         />
       )}
       <ul
-        className={`items-center absolute gap-2 w-full lg:relative lg:justify-center lg:top-auto top-20 flex-col flex lg:w-auto ${
+        className={`items-center absolute gap-2 lg:mt-0 mt-5 w-full lg:relative lg:justify-center lg:top-auto top-20 flex-col flex lg:w-auto ${
           isOpen ? "block" : "hidden"
         } lg:flex lg:flex-row `}
       >
         {navigationItems.map((item, index) => (
           <li
-            className="w-full px-10 py-5 inset-0 z-10 cursor-pointer hover:bg-text-secondary lg:hover:bg-in"
+            className="w-full px-10 py-4  inset-0  z-10 cursor-pointer hover:bg-text-secondary lg:hover:bg-in"
             key={index}
           >
             <Link href={`#${item}`}>{item}</Link>
@@ -57,7 +57,7 @@ export default function Header() {
       </ul>
       <div className="flex justify-center items-center gap-1 px-5 lg:px-0">
         <SignedOut>
-          <Button className="bg-black text-white rounded-xl py-2 px-5">
+          <Button className="text-white rounded-xl py-2 px-5">
             <SignInButton />
           </Button>
         </SignedOut>
