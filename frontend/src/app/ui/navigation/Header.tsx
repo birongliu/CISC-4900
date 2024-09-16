@@ -26,7 +26,7 @@ export default function Header() {
     >
       {resolvedTheme === "dark" ? (
         <Image
-          src="/white-logo.svg"
+          src="/logo/white-logo.svg"
           alt="pet selector logo"
           className={"w-24 h-20"}
           width={50}
@@ -34,7 +34,7 @@ export default function Header() {
         />
       ) : (
         <Image
-          src="/black-logo.svg"
+          src="/logo/black-logo.svg"
           alt="pet selector logo"
           className={"w-24 h-20"}
           width={50}

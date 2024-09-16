@@ -15,30 +15,36 @@ const members: Member[] = [
   {
     name: "Bradley Hung",
     role: "Project Manager",
-    photo: "/bradley.jpeg",
+    photo: "/teams/bradley.jpeg",
     githubUrl: "https://www.github.com/bradleyhung",
     linkedinUrl: "https://www.linkedin.com/in/bradley-hung/",
   },
   {
     name: "Bi Rong Liu",
     role: "Frontend Developer",
-    photo: "/birong.jpeg",
+    photo: "/teams/birong.jpeg",
     githubUrl: "https://www.github.com/birongliu",
     linkedinUrl: "https://www.linkedin.com/in/birongliu/",
   },
   {
     name: "Shuyi Zhou",
     role: "Backend Developer",
-    photo: "/shuyi.jpeg",
+    photo: "/teams/shuyi.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/shuyi-zhou-296ab6246/",
   },
   {
     name: "Jessica Jiang",
     role: "UI/UX Designer",
-    photo: "/jessica.jpeg",
+    photo: "/teams/jessica.jpeg",
     linkedinUrl: "https://www.linkedin.com/in/jjessica415/",
   },
 ];
+
+type SocialKey = "linkedinUrl" | "githubUrl";
+
+type ISocial = {
+  [key in SocialKey]: (...args: any[]) => React.JSX.Element;
+};
 
 export default function Team() {
   return (

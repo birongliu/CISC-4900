@@ -6,19 +6,19 @@ const cards = [
     title: "Adopt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem enim leo.",
-    image: "/chat.svg",
+    image: "/about/chat.svg",
   },
   {
     title: "Community",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem enim leo.",
-    image: "/chat.svg",
+    image: "/about/chat.svg",
   },
   {
     title: "AI",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem enim leo.",
-    image: "/chat.svg",
+    image: "/about/chat.svg",
   },
 ];
 
@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section
       id="About"
-     className="flex items-center px-12 md:px-24 py-28 justify-center  bg-lightBeige">
+     className="flex items-center px-12 md:px-24 py-28 lg:hidden my-48 justify-center  bg-lightBeige">
       <div className="max-w-7xl w-full flex flex-col items-center ">
       <h1 className="text-4xl md:text-5xl font-bold font-poppins text-primary leading-tight">
       What is Petpals?
