@@ -7,7 +7,6 @@ import AnnouncementBanner from "./ui/shared/AnnouncementBanner";
 export default function Home() {
   return (
     <main className="relative flex justify-center items-center flex-col overflow-hidden w-full">
-      <AnnouncementBanner />
       <Hero />
       <About />
       <Explore />
