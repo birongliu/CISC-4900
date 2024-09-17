@@ -29,7 +29,6 @@ const config: Config = {
         }
       },
       colors: {
-        "primary": "rgba(47, 0, 22, 1)",
         "white": "rgba(241, 239, 228, 1)",
         "lightBeige": "#E3CDAD",
         "softCream": "#F1EFE4",  
@@ -38,7 +37,7 @@ const config: Config = {
       backgroundColor: {
         "light-primary": "rgba(241, 239, 228, 1)",
         "light-overlay": "#F3E1C8",
-        "dark-primary": "rgba(227, 205, 173, 1)",
+        "dark-primary": "rgba(14, 16, 27, 1)",
       },
     },
   },

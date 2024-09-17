@@ -4,7 +4,7 @@ import React from "react";
 export default function Github({ link }: { link: string }) {
   return (
     <Link href={link} rel="noopener noreferrer" > 
-    <svg viewBox="0 0 128 128" className="w-5 h-5">
+    <svg viewBox="0 0 128 128" className="w-5 h-5 hover:scale-100">
       <g fill="#181616">
         <path
           fill-rule="evenodd"

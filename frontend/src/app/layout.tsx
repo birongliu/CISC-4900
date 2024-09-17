@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeContext>
           <ClerkLoaded> 
-          {process.env.NEXT_PUBLIC_BETA === "true" && <AnnouncementBanner text="We are currently in beta. Please report any bugs "  />}
+          {process.env.NEXT_PUBLIC_BETA === "true" && <AnnouncementBanner text="We are currently in beta. "  />}
           <Header />
           {children}
           <Footer />
