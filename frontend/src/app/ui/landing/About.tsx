@@ -31,7 +31,7 @@ export default function About() {
       <h1 className="text-4xl md:text-5xl font-bold font-poppins dark:text-white  text-primary leading-tight">
       What is Petpals?
       </h1>
-      <p className="text-darkMaroon text-lg font-poppins dark:text-white  pt-10 text-center">
+      <p className="text-darkMaroon text-lg font-poppins items-center dark:text-white  pt-10 ">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
         velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit
         amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu
@@ -44,7 +44,7 @@ export default function About() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex rounded-xl flex-col p-8 bg-gradient-to-b from-lightBeige to-darkMaroon gap-3 justify-center w-72"
+            className="flex rounded-xl flex-col p-8 bg-gradient-to-b from-lightBeige to-darkMaroon gap-3 justify-center items-center w-72"
           >
             <Image alt={card.title} src={card.image} width={100} height={100} />
             <h1 className="font-bold font-poppins text-2xl text-lightBeige">

@@ -12,13 +12,13 @@ export default function AnnouncementBanner({ text }: { text: string }) {
 
   return (
     <div
-      className={`bg-cyan-900 dark:bg-neutra w-full z-30 py-3 flex shadow-md md:text-center items-center px-5 sticky top-0 ${
-        open ? "block" : "hidden"
+      className={`bg-cyan-900  w-full z-30 py-3 flex shadow-md md:text-center items-center px-5 top-0 ${
+        open ? "block sticky" : "right-full absolute"
       }`}
     >
       <div className="flex items-center flex-col flex-1">
         <p className="font-poppins text-primary text-black dark:text-white text-center font-semibold">
-          Public Announcement: {text}
+          PSA: {text}
         </p>
       </div>
       <Button onClick={handleClick} className="bg-transparent">
