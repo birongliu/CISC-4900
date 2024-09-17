@@ -12,7 +12,7 @@ export default function AnnouncementBanner({ text }: { text: string }) {
 
   return (
     <div
-      className={`bg-cyan-900 dark:bg-neutra w-full z-30 py-3 flex shadow-md md:text-center items-center px-5  sticky top-0 ${
+      className={`bg-cyan-900 dark:bg-neutra w-full z-30 py-3 flex shadow-md md:text-center items-center px-5 sticky top-0 ${
         open ? "block" : "hidden"
       }`}
     >

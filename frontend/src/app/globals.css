@@ -6,7 +6,7 @@
 
 @layer body {
     body {
-        @apply bg-light-primary dark:bg-slate-600;
+        @apply bg-light-primary dark:bg-slate-700;
     }
 }
 

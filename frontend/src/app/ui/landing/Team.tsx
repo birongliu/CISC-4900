@@ -39,12 +39,13 @@ const members: Member[] = [
     linkedinUrl: "https://www.linkedin.com/in/jjessica415/",
   },
 ];
+/**flex items-center px-12 justify-center dark:bg-slate-800 bg-lightBeige */
 
 export default function Team() {
   return (
     <section
       id="Team"
-      className="flex-col py-24 my-28 md:px-20 px-10 rounded justify-center w-full flex items-center"
+      className="flex-col py-40 md:px-20 px-10 rounded justify-center w-full flex items-center"
     >
       <div className="max-w-7xl w-full flex flex-col text-center gap-3">
         <span className="font-bold font-poppins dark:text-white text-darkMaroon text-4xl">
