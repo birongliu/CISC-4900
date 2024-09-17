@@ -4,11 +4,10 @@ import Vector from "./components/Vector";
 import Image from "next/image";
 import Button from "../shared/Button";
 
-
 export default function Hero() {
   return (
-    <section className="my-24 flex items-center px-10 md:px-24 justify-center">
-      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-24 items-center">
+    <section className="py-12 my-16 flex items-center px-10 md:px-24 justify-center">
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-24 justify-center">
         <div className="space-y-6 relative">
         <Vector className="z-10" />
         <Shape className="-top-10 right-32 " />
@@ -25,11 +24,11 @@ export default function Hero() {
             pets. Let&apos;s build meaningful relationships while giving animals
             the homes they deserve.
           </p>
-          <Button className="flex items-center space-x-2 text-pretty font-semibold text-white">
-            <span> Get Started</span>
+          <Button className="flex items-center space-x-2 text-pretty font-semibold dark:bg-white dark:text-black text-white">
+            Get Started
           </Button>
         </div>
-        <div className="lg:block hidden">
+        <div className="lg:flex justify-center hidden h-full">
           <Image
             key="pet"
             src="/hero/hero-picture.svg"
