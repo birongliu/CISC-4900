@@ -6,7 +6,7 @@ const user = {
     userID: "21211"
 }
 
-router.post("/api/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   const { body } = req;
   const { userID } = body;
 
