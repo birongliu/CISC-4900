@@ -15,10 +15,10 @@ export default function Hero() {
           <span className="font-bold font-poppins text-lightBeige">
             Pet Adoption
           </span>
-          <h1 className="text-3xl md:text-3xl font-bold font-poppins text-primary leading-tight">
+          <h1 className="text-3xl dark:text-white md:text-3xl font-bold font-poppins text-primary leading-tight">
             Adopt, Grow, and Build a Community—One Paw at a Time
           </h1>
-          <p className="text-primary text-lg font-poppins text-left">
+          <p className="text-primary dark:text-white  text-lg font-poppins text-left">
             Adopt, connect, and grow together at Petpals. We bring pet lovers
             together by creating a community where you can find your perfect
             companion and connect with others who share the same passion for

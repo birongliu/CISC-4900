@@ -6,6 +6,7 @@ export default function Arrow() {
       width="24"
       height="24"
       viewBox="0 0 24 24"
+      className="stroke-darkMaroon dark:stroke-white"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

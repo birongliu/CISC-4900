@@ -47,11 +47,11 @@ export default function Team() {
       className="flex-col py-24 my-28 md:px-20 px-10 rounded justify-center w-full flex items-center"
     >
       <div className="max-w-7xl w-full flex flex-col text-center gap-3">
-        <span className="font-bold font-poppins text-primary text-4xl">
+        <span className="font-bold font-poppins dark:text-white text-darkMaroon text-4xl">
           Meet the Team
         </span>
-        <p className="text-gray-500 font-poppins text-lg leading-6">
-          We’re a dynamic group of individuals who are passionate about what we
+        <p className="dark:text-white text-darkMaroon font-poppins text-lg leading-6">
+          We&apos;re a dynamic group of individuals who are passionate about what we
           do.
         </p>
       </div>
@@ -70,10 +70,10 @@ export default function Team() {
                 className="w-52 h-52 rounded-full"
               />
               <div className="flex gap-1 flex-col">
-                <span className="font-poppins text-xl font-semibold text-primary">
+                <span className="font-poppins dark:text-white text-darkMaroon text-xl font-semibold text-primary">
                   {member.name}
                 </span>
-                <span className="font-poppins text-base text-gray-500">
+                <span className="font-poppins text-base dark:text-gray-300 text-gray-500">
                   {member.role}
                 </span>
                 <ul className="flex justify-center gap-2 pt-1">
