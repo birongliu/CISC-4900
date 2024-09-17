@@ -44,7 +44,7 @@ export default function About() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex rounded-xl flex-col p-8 bg-gradient-to-b from-lightBeige to-darkMaroon gap-3 justify-center items-center w-72"
+            className="flex rounded-xl flex-col p-8 bg-gradient-to-b from-lightBeige to-darkMaroon gap-3 justify-center  w-72"
           >
             <Image alt={card.title} src={card.image} width={100} height={100} />
             <h1 className="font-bold font-poppins text-2xl text-lightBeige">
