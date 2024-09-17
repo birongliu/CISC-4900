@@ -15,7 +15,7 @@ router.get("/:id", async (req, res) => {
 })
 
 // example api for pets: http://localhost:3001/api/pets
-// will return: { "breed": "dog", "name": "apple", "type": "puppy", "feature": "cute" }
+// will return: [{ "breed": "dog", "name": "apple", "type": "puppy", "feature": "cute" }]
 router.get("/", async (req, res) => {
     const pet = await findAll()
     res.json({ data: pet, status: 200 })
