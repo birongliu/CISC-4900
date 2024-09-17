@@ -4,7 +4,8 @@ const petModel = new Schema({
     breed: String,
     name: String,
     type: String,
-    feature: String
+    feature: String,
+    
 });
 
 const pets = model("pets", petModel);
