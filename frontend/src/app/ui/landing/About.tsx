@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section
       id="About"
-     className="flex items-center px-12 md:px-24 py-28 my-48 justify-center dark:bg-transparent  dark:bg-slate-800 bg-lightBeige">
+     className="flex items-center px-12 md:px-24 py-28 my-28 justify-center dark:bg-slate-800 bg-lightBeige">
       <div className="max-w-7xl w-full flex flex-col items-center ">
       <h1 className="text-4xl md:text-5xl font-bold font-poppins dark:text-white  text-primary leading-tight">
       What is Petpals?
