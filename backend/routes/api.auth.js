@@ -1,9 +1,9 @@
 import { Router } from "express";
-
+import jwt from "jsonwebtoken"
 const router = Router();
 // should remove this hardcoded user object and use a database or some other form of storage
 const user = {
-    userID: "21211"
+  userID: "21211"
 }
 
 router.post("/login", async (req, res) => {
