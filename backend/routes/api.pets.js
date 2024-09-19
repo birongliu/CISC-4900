@@ -1,12 +1,13 @@
 import { Router } from "express"
 import { findAll, get, create } from "../database/models/petModel.js"
 import { z } from "zod"
+import { ClerkExpressWithAuth } from '@clerk/clerk-sdk-node';
 
 const router = Router()
 
 // example api for pets: http://localhost:3001/api/pets/apple
 // will return: { "breed": "dog", "name": "apple", "type": "puppy", "feature": "cute" }
-router.get("/:id", async (req, res) => {
+router.get("/:id",  async (req, res) => {
     const id = req.params.id
     console.log("id", id)
     if(!id) return res.json({ data: "invalid id provided", status: 404 })
@@ -16,7 +17,7 @@ router.get("/:id", async (req, res) => {
 
 // example api for pets: http://localhost:3001/api/pets
 // will return: [{ "breed": "dog", "name": "apple", "type": "puppy", "feature": "cute" }]
-router.get("/", async (req, res) => {
+router.get("/",  async (req, res) => {
     const pet = await findAll()
     res.json({ data: pet, status: 200 })
 })
