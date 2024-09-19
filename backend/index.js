@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import pets from "./routes/api.pets.js"
 import users from "./routes/api.users.js"
+import auth from "./routes/api.auth.js"
 import { authMiddleware } from './middleware/auth.middleware.js';
 const port = process.env.PORT || 3001;
 
