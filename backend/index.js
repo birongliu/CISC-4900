@@ -21,7 +21,6 @@ app.use(cors({
     origin: process.env.FRONTEND_URL
 }));
 
-app.use("/api/auth", auth)
 app.use("/api/pets",authMiddleware, pets)
 app.use("/api/users", authMiddleware, users)
 
