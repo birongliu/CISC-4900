@@ -57,7 +57,7 @@ export default function Header() {
       </ul>
       <div className="flex justify-center items-center gap-1 px-5 lg:px-0">
         <SignedOut>
-          <Button className="text-white rounded-lg font-poppins font-semibold text-darkMaroon dark:bg-white">
+          <Button className="text-white rounded-lg font-poppins font-semibold dark:bg-white">
             <SignInButton />
           </Button>
         </SignedOut>
