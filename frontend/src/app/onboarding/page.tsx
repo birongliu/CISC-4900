@@ -13,7 +13,7 @@ import PetTypeForm from "../ui/onboarding/forms/PetTypeForm";
 import BreedTypeForm from "../ui/onboarding/forms/BreedTypeForm";
 import ResultForm from "../ui/onboarding/forms/ResultForm";
 
-const progressItems: ProgressItemProps[] = [
+export const progressItems: ProgressItemProps[] = [
   {
     id: "onboarding - Instruction",
     question: "Application Name",
@@ -101,13 +101,16 @@ export default function OnboardingComponent() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [progressItem, setProgressItem] =
     useState<ProgressItemProps[]>(progressItems);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState(new FormData());
 
   const handleFormSubmit = async (formData: FormData) => {
+    setLoading(true);
     await completeOnboarding(formData);
     if (user) await user.reload();
     setIsSubmitting(true);
-    //router.push("/dashboard");
+    setLoading(false);
+    router.push("/dashboard");
   };
 
   const handleSubmit = () => {
@@ -194,12 +197,12 @@ export default function OnboardingComponent() {
           <div className="w-full flex justify-center items-center gap-2">
             {current.actions.map((action) => (
               <button
-                disabled={ActionType.SUBMIT === action && isSubmitting}
+                disabled={ActionType.SUBMIT === action && loading}
                 onClick={(e) => actions[action](e)}
                 className={`w-full uppercase bg-darkMaroon rounded-xl text-white p-2`}
                 key={action}
               >
-                {action}
+                {ActionType.SUBMIT === action && loading ? "Loading" : action}
               </button>
             ))}
           </div>

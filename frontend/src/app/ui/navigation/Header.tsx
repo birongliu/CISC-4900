@@ -60,8 +60,8 @@ export default function Header({ navigationItems, className }: { className?: str
           </Button>
         </SignedOut>
         <SignedIn>
-          <div role="user-button" className="flex items-center overflow">
-            <UserButton />
+          <div role="user-button" className={`flex items-center overflow ${isLandingPage ? "border rounded-xl p-2  font-poppins dark:text-black dark:bg-white " : ""}`}>
+            {isLandingPage ? <Link href="/dashboard">Dashboard</Link> : <UserButton />}
           </div>
         </SignedIn>
         <button className={`lg:hidden block ${isLandingPage ? "block" : "hidden"}`} onClick={() => setIsOpen(!isOpen)}>
