@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
         type: string,
         breed: string,
     }]`;
-  const response = await fetch('http://localhost:3001/api/pets')
+  const response = await fetch(`${process.env.BACKEND_URL}/api/pets`)
   const petData = JSON.stringify(await response.json())
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
   const message = req.body.message;
