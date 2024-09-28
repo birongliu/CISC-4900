@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeContext } from "./ui/navigation/ThemeProvider";
 import { ClerkLoaded, ClerkProvider } from "@clerk/nextjs";
-import Footer from "./ui/navigation/Footer";
-import Header from "./ui/navigation/Header";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +25,7 @@ export default function RootLayout({
           <ThemeContext>
             <ClerkLoaded>
               {children}
+              <Analytics />
             </ClerkLoaded>
           </ThemeContext>
         </body>
