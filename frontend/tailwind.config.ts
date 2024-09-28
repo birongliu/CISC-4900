@@ -28,17 +28,23 @@ const config: Config = {
           '100%': { opacity: '1' },
         }
       },
+    
       colors: {
         "white": "rgba(241, 239, 228, 1)",
         "lightBeige": "#E3CDAD",
         "softCream": "#F1EFE4",  
-        "darkMaroon": "#2f0016"
+        "darkMaroon": "#2f0016",
+        "lightGray": "#F2F2F2",
+        "mintGray": "#D3E2DC",
+        "pureWhite": "#FFFFFF",
+        "paleCyan": "#BED4D4",
+        
       },
       backgroundColor: {
         "light-primary": "rgba(241, 239, 228, 1)",
         "light-overlay": "#F3E1C8",
         "dark-primary": "rgba(14, 16, 27, 1)",
-      },
+      }
     },
   },
   plugins: [],
