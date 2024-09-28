@@ -3,9 +3,8 @@ import { Schema, model } from "mongoose";
 const petModel = new Schema({
     breed: String,
     name: String,
-    type: String,
+    animalType: String,
     feature: String,
-    
 });
 
 const pets = model("pets", petModel);
@@ -20,9 +19,9 @@ export async function findAll() {
     return await pets.find()
 } 
 
-export async function get(name) {
+export async function get(breed) {
     const data = await pets.findOne({
-        name: { $eq: name }
+        breed: { $eq: breed }
     })
     if (!data) return null
     return data;
