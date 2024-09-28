@@ -9,7 +9,6 @@ export default function Vector({ className }: { className?: string }) {
         height="486" 
         viewBox="0 0 878 486"
         fill="none"
-        className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

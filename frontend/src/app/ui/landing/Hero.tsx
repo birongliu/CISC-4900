@@ -6,11 +6,11 @@ import Button from "../shared/Button";
 
 export default function Hero() {
   return (
-    <section className="py-12 my-16 flex items-center px-10 md:px-20 justify-center">
+    <section className="py-12 my-20 flex items-center px-16 md:px-16 justify-center">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-24 justify-center">
         <div className="space-y-6 relative">
-        <Vector className="z-10" />
-        <Shape className="-top-10 right-32" />
+        <Vector className="z-10 md:w-96 md:h-96 h-10 w-10" />
+        <Shape className="-top-10 right-32 md:h-52 md:w-52" />
           <span className="font-bold font-poppins text-white">
             Pet Adoption
           </span>
