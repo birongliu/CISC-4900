@@ -13,7 +13,7 @@ import PetTypeForm from "../ui/onboarding/forms/PetTypeForm";
 import BreedTypeForm from "../ui/onboarding/forms/BreedTypeForm";
 import ResultForm from "../ui/onboarding/forms/ResultForm";
 
-export const progressItems: ProgressItemProps[] = [
+const progressItems: ProgressItemProps[] = [
   {
     id: "onboarding - Instruction",
     question: "Application Name",
