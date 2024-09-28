@@ -21,6 +21,7 @@ export default function ResultForm({
             className={`border p-2 last:grid-rows-1 cursor-pointer ${
               index === data.length - 1 ? "col-span-2" : ""
             }`}
+            key={item.key}
           >
             {item.key}: {item.value}
           </div>
