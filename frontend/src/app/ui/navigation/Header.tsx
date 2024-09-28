@@ -5,25 +5,25 @@ import React from "react";
 import CloseIcon from "./icons/Close";
 import MenuIcon from "./icons/Menu";
 import Button from "../shared/Button";
-import {
-  SignedOut,
-  UserButton,
-  SignInButton,
-  SignedIn,
-} from "@clerk/nextjs";
+import { SignedOut, UserButton, SignInButton, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
-const navigationItems = ["About", "Explore", "Team"];
+import { cn } from "@/app/utils/functions";
+import { usePathname } from "next/navigation";
 
-export default function Header() {
+export default function Header({ navigationItems, className }: { className?: string, navigationItems?: string[] }) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const pathname = usePathname()
   const { resolvedTheme } = useTheme();
+
+  const isLandingPage = pathname === "/";
 
   return (
     <div
-      className={`flex lg:justify-evenly relative justify-between items-center lg:mb-auto pt-2  ${
+      className={cn(`flex relative ${isLandingPage ? `lg:justify-evenly relative justify-between items-center px-5 lg:mb-auto pt-2  ${
         isOpen ? "mb-48" : ""
-      }`}
+      }` : "flex justify-between px-10"}`, className)}
     >
+      
       {resolvedTheme === "dark" ? (
         <Image
           src="/logo/white-logo.svg"
@@ -42,31 +42,29 @@ export default function Header() {
         />
       )}
       <ul
-        className={`items-center absolute gap-2 lg:mt-0 mt-5 w-full lg:relative lg:justify-center lg:top-auto top-20 flex-col flex lg:w-auto ${
+        className={`items-center ${isLandingPage ? "block" : "hidden"} absolute gap-2 lg:mt-0 mt-5 w-full lg:relative lg:justify-center lg:top-auto top-20 flex-col flex lg:w-auto ${
           isOpen ? "block" : "hidden"
         } lg:flex lg:flex-row `}
       >
-        {navigationItems.map((item, index) => (
-          <li
-            className="w-full px-10 py-4  inset-0  z-10 cursor-pointer hover:bg-text-secondary lg:hover:bg-in"
-            key={index}
-          >
-            <Link href={`#${item}`}>{item}</Link>
-          </li>
+        {isLandingPage && navigationItems && navigationItems.map((item, index) => (
+          <Link className="w-full px-10 py-4  inset-0  z-10 cursor-pointer hover:bg-text-secondary lg:hover:bg-in" key={index} href={`#${item}`}>
+              {item}
+          </Link>
         ))}
       </ul>
+     
       <div className="flex justify-center items-center gap-1 px-5 lg:px-0">
         <SignedOut>
-          <Button className="text-white rounded-lg font-poppins font-semibold text-darkMaroon dark:bg-white">
+          <Button className="text-white rounded-lg font-poppins font-semibold dark:bg-white dark:text-darkMaroon">
             <SignInButton />
           </Button>
         </SignedOut>
         <SignedIn>
           <div role="user-button" className="flex items-center overflow">
-            <UserButton  />
+            <UserButton />
           </div>
         </SignedIn>
-        <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
+        <button className={`lg:hidden block ${isLandingPage ? "block" : "hidden"}`} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>

@@ -11,7 +11,6 @@ router.get('/', async (req, res) => {
     // Fetch all users from Clerk
       const response = await clerkClient.users.getUserList()
       const users = response.data
-    console.log(users)
     // Optionally format the user data as needed
     const userList = users.map(user => ({
       id: user.id,

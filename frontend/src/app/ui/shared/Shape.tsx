@@ -5,11 +5,10 @@ export default function Shape({ className }: { className?: string }) {
   return (
     <div className={cn(`absolute -z-10`, className)}>
       <svg
-        width="180"
-        height="181"
+        width="250"
+        height="250"
         viewBox="0 0 180 181"
         fill="none"
-        className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

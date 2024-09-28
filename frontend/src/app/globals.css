@@ -16,7 +16,6 @@
     }
   }
 
-
 body:has([role="dialog"]) {
     @apply overflow-y-hidden;
 }

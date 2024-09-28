@@ -11,7 +11,7 @@ const images = [
     alt: "Cute rabbit",
   },
   {
-    src: "/explore/rat.png",
+    src: "/explore/parrot.jpg",
     alt: "Curious hamster",
   },
   {
@@ -47,9 +47,9 @@ export default function Explore() {
                 key={image.src}
                 src={image.src}
                 alt={image.alt}
-                width={300}
+                width={300} 
                 height={300}
-                className="rounded-lg object-cover w-full h-full"
+                className="rounded-lg object-cover shadow-lg"
               />
             );
           })}
