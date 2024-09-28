@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const petModel = new Schema({
-    breed: String,
+    breedType: String,
     name: String,
     animalType: String,
     feature: String,
