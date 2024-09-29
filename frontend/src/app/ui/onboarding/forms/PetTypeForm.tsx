@@ -11,9 +11,7 @@ export default function PetTypeForm({
   const [selected, setSelected] = React.useState<string | null>(data);
   const handleClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     e.preventDefault()
-    console.log("here")
     setSelected(e.currentTarget.id);
-    console.log(e.currentTarget.id)
     handleFormData(e.currentTarget.id);
   }
 

@@ -11,7 +11,7 @@ export const completeOnboarding = async (formData: FormData) => {
   }
   const data = getDataFromFormData(formData);
   const dataFromAI = await fetchAIOnboardingResult(data);
-
+  if(!dataFromAI) return { message: "Error Fetching AI Data" };
   try {
     const clerk = clerkClient();
     await clerk.users.updateUser(userId, {
@@ -41,6 +41,7 @@ async function fetchAIOnboardingResult(
       body: JSON.stringify(formData),
     }
   );
+  if(data.status !== 200) return null;
   const response = await data.json();
   return response.data;
 }

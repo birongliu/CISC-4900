@@ -7,7 +7,6 @@ export default function ResultForm({
   progressItem,
 }: OnboardingComponentProps) {
   const data = getDataFromFormData(formData);
-  console.log(data);
   return (
     <div className="w-full py-5">
       <div className="py-2">
