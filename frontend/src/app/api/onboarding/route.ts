@@ -1,14 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
+  console.log("here request")
   const ctx = await request.json()
   const response = await fetch(`${process.env.API_URL}/api/aiResponse`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ message: ctx }),
+    body: JSON.stringify({ message: JSON.stringify(ctx) }),
   })
+  console.log(ctx)
   if(response.status !== 200) { 
     return NextResponse.json({ data: { message: 'Error' }}, { status: 500 });
   }
