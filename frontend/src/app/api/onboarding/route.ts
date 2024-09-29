@@ -9,7 +9,6 @@ export async function POST(request: NextRequest) {
     },
     body: JSON.stringify({ message: JSON.stringify(ctx) }),
   })
-  console.log(ctx)
   if(response.status !== 200) { 
     return NextResponse.json({ data: { message: 'Error' }}, { status: 500 });
   }
