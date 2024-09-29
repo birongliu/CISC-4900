@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
-  console.log("here request")
   const ctx = await request.json()
   const response = await fetch(`${process.env.API_URL}/api/aiResponse`, {
     method: 'POST',

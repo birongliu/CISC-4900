@@ -31,7 +31,6 @@ export const completeOnboarding = async (formData: FormData) => {
 async function fetchAIOnboardingResult(
   formData: OnboardingResultOptions[]
 ) {
-  console.log("here request", process.env.NEXT_PUBLIC_CLIENT_URL);
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_CLIENT_URL}/api/onboarding`,
     {
