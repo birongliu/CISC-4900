@@ -20,6 +20,7 @@ export const completeOnboarding = async (formData: FormData) => {
         onboardingAIOutput: dataFromAI,
       },
     });
+    console.log("User metadata Updated");
 
     return { message: "User metadata Updated" };
   } catch (e) {
