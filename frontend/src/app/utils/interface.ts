@@ -42,5 +42,6 @@ export interface Pet {
   id: number;
   name: string;
   type: string;
+  imgUrl: string;
   breed: string;
 }

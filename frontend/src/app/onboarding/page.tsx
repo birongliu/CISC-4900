@@ -98,7 +98,6 @@ export default function OnboardingComponent() {
   const { user } = useUser();
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [progressItem, setProgressItem] =
     useState<ProgressItemProps[]>(progressItems);
   const [loading, setLoading] = useState(false);
@@ -106,10 +105,11 @@ export default function OnboardingComponent() {
 
   const handleFormSubmit = async (formData: FormData) => {
     setLoading(true);
-    await completeOnboarding(formData);
+    const { message } = await completeOnboarding(formData);
     if (user) await user.reload();
-    setIsSubmitting(true);
     setLoading(false);
+    console.log(message);
+    console.log("User Onboarding Completed");
     router.push("/dashboard");
   };
 
