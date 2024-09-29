@@ -36,7 +36,6 @@ export default function BreedTypeForm({
   const [selected, setSelected] = React.useState<string | null>(data);
   const handleClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     e.preventDefault()
-    console.log("here 2")
     setSelected(e.currentTarget.id);
     handleFormData(e.currentTarget.id);
   }
