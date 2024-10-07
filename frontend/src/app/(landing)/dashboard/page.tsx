@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Dashboard() {
   const { user, isSignedIn } = useUser();
   const pets =
-    isSignedIn && user.publicMetadata.onboardingAIOutput
+    isSignedIn && user.publicMetadata.onboardingAIOutput !== null
       ? (user.publicMetadata.onboardingAIOutput as Pet[])
       : null;
   return (
@@ -20,7 +20,7 @@ export default function Dashboard() {
         </h2>
         {pets !== null ? (
           <ul className="flex gap-2 justify-center">
-            {pets.map((pet) => (
+            {(pets).map((pet) => (
               <div className="text-center py-2" key={pet.name}>
                 <Image
                   src={pet.imgUrl}
