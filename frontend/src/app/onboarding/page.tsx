@@ -99,6 +99,7 @@ export default function OnboardingComponent() {
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
   const [formData, setFormData] = useState<FormData>({
     Experience: "",
     PetSize: "",
@@ -125,6 +126,10 @@ export default function OnboardingComponent() {
   function handleNext(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
     const current = getProgressItem(progressItems, currentStep);
+    if(current.id !== "Introduction" && !formData[current.id]) {
+     setMessage("Please fill out the form before proceeding");
+     return;
+    };
     const next = getProgressItem(progressItems, currentStep + 1);
     setCurrentStep((prev) => prev + 1);
     current.status = "completed";
@@ -141,6 +146,7 @@ export default function OnboardingComponent() {
   }
 
   function handleFormData(key: string, value: string) {
+    setMessage("");
     setFormData((prev) => ({ ...prev, [key]: value }));
   }
 
@@ -193,7 +199,8 @@ export default function OnboardingComponent() {
             data: formData[current.id]
           })}
       </div>
-      <div className="bg-slate-500 w-full flex justify-end fixed bottom-0">
+      <div className="bg-slate-500 w-full flex items-center justify-end fixed bottom-0">
+      {message && <p className="text-white">{message}</p>}
         <div className="flex gap-2 p-3">
           {current.actions.map((action, i) => (
             <button
