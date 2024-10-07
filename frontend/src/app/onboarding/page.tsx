@@ -183,6 +183,7 @@ export default function OnboardingComponent() {
       <Shape className="-top-24 -left-12" />
       <Shape className="-top-24 -right-12 w-32" />
       <div className="bg-slate-400 mx-2 md:mx-12 rounded-xl p-5 h-full">
+      <PanelProgressBar progressItems={progressItems} />
       {current.component({
             currentItem: current,
             formData,
@@ -193,7 +194,6 @@ export default function OnboardingComponent() {
           })}
       </div>
       <div className="bg-slate-500 w-full flex justify-end fixed bottom-0">
-        <PanelProgressBar progressItems={progressItems} />
         <div className="flex gap-2 p-3">
           {current.actions.map((action, i) => (
             <button
