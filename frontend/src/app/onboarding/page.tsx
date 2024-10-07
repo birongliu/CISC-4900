@@ -179,9 +179,9 @@ export default function OnboardingComponent() {
   current.status = "current";
 
   return (
-    <div className="w-full">
+    <div className="">
       <Shape className="-top-24 -left-12" />
-      <Shape className="-top-24 -right-12 w-32" />
+      <Shape className="right-0 -top-24 w-32 overflow-hidden" />
       <div className="bg-slate-400 mx-2 md:mx-12 rounded-xl p-5 h-full">
       <PanelProgressBar progressItems={progressItems} />
       {current.component({
