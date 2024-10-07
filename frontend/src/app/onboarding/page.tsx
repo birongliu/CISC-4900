@@ -138,6 +138,7 @@ export default function OnboardingComponent() {
 
   function handleBack(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     e.preventDefault();
+    if(message) setMessage("");
     const current = getProgressItem(progressItems, currentStep);
     const prev = getProgressItem(progressItems, currentStep - 1);
     setCurrentStep((prev) => prev - 1);
@@ -145,7 +146,7 @@ export default function OnboardingComponent() {
     prev.status = "current";
   }
 
-  function handleFormData(key: string, value: string) {
+  function handleFormData(key: string, value: string | string[]) {
     setMessage("");
     setFormData((prev) => ({ ...prev, [key]: value }));
   }
@@ -185,7 +186,7 @@ export default function OnboardingComponent() {
   current.status = "current";
 
   return (
-    <div className="">
+    <div className="mb-20">
       <Shape className="-top-24 -left-12" />
       <Shape className="right-0 -top-24 w-32 overflow-hidden" />
       <div className="bg-slate-400 mx-2 md:mx-12 rounded-xl p-5 h-full">
@@ -195,7 +196,7 @@ export default function OnboardingComponent() {
             formData,
             handleFormData: (data) => handleFormData(current.id, data),
             nextData: { id: next.id, data: formData[next.id] },
-            previousData: { id: prev.id, data: formData[next.id] },
+            previousData: { id: prev.id, data: formData[prev.id] },
             data: formData[current.id]
           })}
       </div>

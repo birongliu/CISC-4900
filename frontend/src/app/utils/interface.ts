@@ -28,12 +28,12 @@ export interface ProgressItemProps {
 }
 
 export interface OnboardingComponentProps {
-  data: string;
+  data: string | string[];
   currentItem: ProgressItemProps;
   formData: FormData;
   nextData: { id: PropId; data: string };
   previousData: { id: PropId; data: string };
-  handleFormData: (data: string) => void;
+  handleFormData: (data: string | string[]) => void;
 }
 
 export type FormData = {

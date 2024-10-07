@@ -8,7 +8,7 @@ export default function Dashboard() {
   const pets =
     isSignedIn && user.publicMetadata.onboardingAIOutput !== null
       ? (user.publicMetadata.onboardingAIOutput as Pet[])
-      : null;
+      : undefined;
   return (
     <div className="px-12 py-5">
       <h1 className="text-xl font-bold uppercase">
@@ -18,9 +18,9 @@ export default function Dashboard() {
         <h2 className="text-2xl font-bold py-2 text-center uppercase">
           Recommended Pets
         </h2>
-        {pets !== null ? (
+        {pets ? (
           <ul className="flex gap-2 justify-center">
-            {(pets).map((pet) => (
+            {pets.map((pet) => (
               <div className="text-center py-2" key={pet.name}>
                 <Image
                   src={pet.imgUrl}
